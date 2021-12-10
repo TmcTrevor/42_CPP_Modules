@@ -1,0 +1,6 @@
+FLAGS = -Wall -Wextra -Werror -std=c++98
+CP = clang++
+SRC = PhoneBook.cpp Contact.cpp main.cpp
+	@echo "no *.o"
+fclean: clean
+re: fclean all
