@@ -5,6 +5,15 @@ Zombie::Zombie(string name)
 	this->name = name;
 	announce();
 }
+Zombie::Zombie()
+{
+	;
+}
+
+void	Zombie::setname(string name)
+{
+	this->name = name;
+}
 
 Zombie::~Zombie()
 {

@@ -1,5 +1,4 @@
 #ifndef _ZOMBIE_HPP
-#ifndef _ZOMBIE_HPP
 #define	_ZOMBIE_HPP
 #include <iostream>
 #include <iomanip>
@@ -25,12 +24,13 @@ class Zombie
 	private :
 		string name;
 	public :
-		void	announce(void);
 		Zombie();
+		void	announce(void);
+		Zombie(string name);
+		void	setname(string name);
 		~Zombie();
 };
 
-Zombie* newZombie( string name );
-void randomChump( string name );
+Zombie* zombieHorde( int N, string name );
 
 #endif

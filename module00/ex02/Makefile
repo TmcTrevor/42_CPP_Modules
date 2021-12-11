@@ -2,7 +2,7 @@ NAME = BANK
 
 FLAGS = -Wall -Wextra -Werror
 
-CP = clang++
+CP = clang++ -std=c++98
 
 SRC = Account.cpp tests.cpp
 
