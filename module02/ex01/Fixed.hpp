@@ -4,6 +4,7 @@
 #include <iomanip>
 #include <string>
 #include <ctime>
+#include <cmath>
 
 # define	string std::string
 # define	Cout std::cout
@@ -26,14 +27,20 @@ class Fixed
 		int fixed_v;
 		static const int  nb_bits;
 	public :
+	/******************* Cons/des tructor ***********/
 		Fixed();
 		~Fixed();
 		Fixed(const int a);
-		Fixed(const Fixed &f);
-		Fixed operator = (Fixed const &f);
+		Fixed(const float a);
+		Fixed(Fixed const &f);
+	/*************** g/setter **********/
 		int getRawBits(void) const;
 		void setRawBits(int const raw);
-
+		float toFloat(void) const;
+		int	toInt(void) const;
+	/********** comparaison operators ****************************/
+		Fixed &operator = (Fixed const &f);
 };
+std::ostream& operator<<(std::ostream& os, const Fixed& f);
 
 #endif

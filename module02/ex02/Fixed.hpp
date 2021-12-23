@@ -4,6 +4,7 @@
 #include <iomanip>
 #include <string>
 #include <ctime>
+#include <cmath>
 
 # define	string std::string
 # define	Cout std::cout
@@ -27,11 +28,41 @@ class Fixed
 		static const int  nb_bits;
 	public :
 		Fixed();
-		Fixed(const Fixed &f);
-		Fixed operator = (Fixed const &f);
+		~Fixed();
+		Fixed(const int a);
+		Fixed(const float a);
+		Fixed(Fixed const &f);
+		
 		int getRawBits(void) const;
 		void setRawBits(int const raw);
+		float toFloat(void) const;
+		int	toInt(void) const;
+		/********** comparaison operators ****************************/
+		Fixed &operator = (Fixed const &f);
+		bool operator==(Fixed const &f);
+		bool operator>(Fixed const &f);
+		bool operator<(Fixed const &f);
+		bool operator<=(Fixed const &f);
+		bool operator>=(Fixed const &f);
+		bool operator!=(Fixed const &f);
+	/********** Arethmetic operators ****************************/
+		Fixed operator+(Fixed const &f);
+		Fixed operator-(Fixed const &f);
+		Fixed operator*(Fixed const &f);
+		Fixed operator/(Fixed const &f);
+	/********** inc/dec rement operators ****************************/
+		Fixed operator++();
+		Fixed operator--();
+		Fixed operator++(int);
+		Fixed operator--(int);
+	/***************** static function ****************************/
+		static Fixed &min(Fixed &a, Fixed& b);
+		static Fixed &max(Fixed &a, Fixed& b);
+		static Fixed const &min(Fixed const &a, Fixed const &b);
+		static Fixed const &max(Fixed const &a, Fixed const &b);
 
+		
 };
+std::ostream& operator<<(std::ostream& os, const Fixed& f);
 
 #endif
