@@ -5,7 +5,7 @@ ScavTrap::ScavTrap()
     Hitpoints = 100;
     EnergyPoints = 50;
     attackdmg = 20;
-    Cout << GREEN << " ScavTrap Default constuctor called" << DEFAULT << Endl;
+    Cout << YELLOW << " ScavTrap Default constuctor called" << DEFAULT << Endl;
 }
 
 ScavTrap::~ScavTrap()
@@ -19,7 +19,7 @@ ScavTrap::ScavTrap(string name)
     Hitpoints = 100;
     EnergyPoints = 50;
     attackdmg = 20;
-    Cout << GREEN << "ScavTrap name constuctor called" << DEFAULT << Endl;
+    Cout << YELLOW << "ScavTrap name constuctor called" << DEFAULT << Endl;
 }
 
 ScavTrap::ScavTrap(const ScavTrap& c)
