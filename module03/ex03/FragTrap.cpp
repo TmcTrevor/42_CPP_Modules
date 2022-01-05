@@ -57,6 +57,21 @@ void    FragTrap::beRepaired(unsigned int amount)
     Hitpoints+=amount;
 }
 
+int FragTrap::get_Hitpoints() const
+{
+    return (Hitpoints);
+}
+
+int FragTrap::get_attackdmg() const
+{
+    return (attackdmg);
+}
+
+int FragTrap::get_EnergyPoint() const
+{
+    return (EnergyPoints);
+}
+
 void	FragTrap::highFiveGuys(void)
 {
         Cout << GREEN << "FragTrap " << Name << " : *high Five Guys*" << DEFAULT << Endl;

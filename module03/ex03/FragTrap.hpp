@@ -3,7 +3,7 @@
 #include "ClapTrap.hpp"
 
 
-class FragTrap : public ClapTrap
+class FragTrap : public virtual ClapTrap
 {
     private:
 
@@ -16,6 +16,9 @@ class FragTrap : public ClapTrap
 		void	attack(string const &a);
 		void 	takeDamage(unsigned int damage);
 		void	beRepaired(unsigned int amount);
+		int	get_Hitpoints() const;
+		int get_EnergyPoint() const;
+		int get_attackdmg() const;
 		void	highFiveGuys(void);
 
 

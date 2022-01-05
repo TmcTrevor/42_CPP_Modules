@@ -5,7 +5,7 @@ FLAGS = -Wall -Wextra -Werror
 CP = clang++ -std=c++98
 
 Headers = FragTrap.hpp ScavTrap.hpp ClapTrap.hpp
-SRC = main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
+SRC = main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp DiamondTrap.cpp
 
 all: $(NAME)
 

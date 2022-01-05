@@ -1,10 +1,10 @@
-#include "FragTrap.hpp"
+#include "DiamondTrap.hpp"
 
 int main()
 {
-    FragTrap a("Daruis");
-    FragTrap b("yasuo");
-    FragTrap c;
+    DiamondTrap a("Daruis");
+    DiamondTrap b("yasuo");
+    DiamondTrap c;
     c = b;
     a.attack(b.get_Name());
     b.takeDamage(a.get_attackdmg());
