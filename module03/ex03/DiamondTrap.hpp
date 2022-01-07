@@ -13,7 +13,7 @@ class DiamondTrap : public FragTrap, public ScavTrap
     public:
       DiamondTrap();
 		~DiamondTrap();
-		DiamondTrap(string a);
+		DiamondTrap(string const  &a);
 		DiamondTrap(const DiamondTrap& c);
 		DiamondTrap& operator=(const DiamondTrap& c);
 		void	attack(string const &a);
@@ -21,6 +21,9 @@ class DiamondTrap : public FragTrap, public ScavTrap
 		void	beRepaired(unsigned int amount);
 		string	getName_diamond(void) const;
 		void	setName_diamond(string const & name);
+		int			get_Hitpoints() const;
+		int 		get_EnergyPoint() const;
+		int 		get_attackdmg() const;
 		void	whoAmI();
 
 };

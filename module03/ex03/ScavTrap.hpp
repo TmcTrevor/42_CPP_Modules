@@ -20,7 +20,7 @@ class ScavTrap : public virtual ClapTrap
 		string get_Name() const;
 		int	get_Hitpoints() const;
 		int get_EnergyPoint() const;
-		int get_attackdmg() const;
+		int 		get_attackdmg() const;
         void  guardGate();
      
 };

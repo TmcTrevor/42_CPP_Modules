@@ -1,16 +1,19 @@
 #include "DiamondTrap.hpp"
 
-int main()
+int		main(void)
 {
-    DiamondTrap a("Daruis");
-    DiamondTrap b("yasuo");
-    DiamondTrap c;
-    c = b;
-    a.attack(b.get_Name());
-    b.takeDamage(a.get_attackdmg());
-    b.beRepaired(10);
-    a.highFiveGuys();
-    Cout << a << Endl << b << Endl << c << Endl;
+	DiamondTrap	obj("Daruis");
+
+	Cout << "\nClaptrap Name : " << obj.get_Name() << Endl;
+	Cout << "Diamond Name : " << obj.getName_diamond() << Endl;
+	Cout << "Hit points : " << obj.get_Hitpoints() << Endl;
+	Cout << "Energy points : " << obj.get_EnergyPoint() << Endl;
+	Cout << "Attack damage : " << obj.get_attackdmg() << Endl << Endl;
+	obj.attack("YASUO");
+	obj.FragTrap::highFiveGuys();
+	obj.ScavTrap::guardGate();
+	obj.whoAmI();
+	return (0);
 }
 // int             main(void)
 // {

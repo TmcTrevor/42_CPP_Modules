@@ -3,16 +3,16 @@
 DiamondTrap::DiamondTrap(void) : ClapTrap("Anonymous")
 {
     this->Hitpoints = FragTrap::get_Hitpoints();
-    this->EnergyPoints = ScoreTrap::get_EnergyPoints();
-    this->attackdmg = FragTrap::get_Attackdmg();
+    this->EnergyPoints = ScavTrap::get_EnergyPoint();
+    this->attackdmg = FragTrap::get_attackdmg();
 	Cout << "DiamondTrap::Default contructor called" << Endl;
 }
 
 DiamondTrap::DiamondTrap(string const & name) : ClapTrap(name + "_clapName")
 {
     this->Hitpoints = FragTrap::get_Hitpoints();
-    this->EnergyPoints = ScoreTrap::get_EnergyPoints();
-    this->attackdmg = FragTrap::get_Attackdmg();
+    this->EnergyPoints = ScavTrap::get_EnergyPoint();
+    this->attackdmg = FragTrap::get_attackdmg();
 	Cout << "DiamondTrap::Parameterized contructor called" << Endl;
 	Name = name;
 }
@@ -53,4 +53,19 @@ void	DiamondTrap::attack(string const & target)
 DiamondTrap::~DiamondTrap(void)
 {
 	Cout << "DiamondTrap::Destructor called" << Endl; 
+}
+
+int DiamondTrap::get_Hitpoints() const
+{
+    return (Hitpoints);
+}
+
+int DiamondTrap::get_attackdmg() const
+{
+    return (attackdmg);
+}
+
+int DiamondTrap::get_EnergyPoint() const
+{
+    return (EnergyPoints);
 }
