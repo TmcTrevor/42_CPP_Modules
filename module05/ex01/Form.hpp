@@ -1,11 +1,12 @@
-#ifndef _BUREAUCRAT_HPP
-#define _BUREAUCRAT_HPP
+ #ifndef _FORM_HPP
+#define _FORM_HPP
 #include <iostream>
 #include <iomanip>
 #include <string>
 #include <ctime>
 #include <exception>
 #include <cmath>
+#include "Bureaucrat.hpp"
 
 # define	string std::string
 # define	Cout std::cout
@@ -21,11 +22,15 @@
 # define 	PURPLE 	"\033[1;35m"
 # define 	DEFAULT	"\e[0;37m"
 
-class Bureaucrat
+
+
+class Form
 {
     private:
         string Name;
-        int Grade;
+        bool signd;
+        const int signgrade;
+        const int execgrade;
     public :
         class GradeTooLowException: public std::exception
         {
@@ -35,16 +40,17 @@ class Bureaucrat
         {
             const char* what() const throw();
         };
-        Bureaucrat();
-        Bureaucrat(string &name, int grade);
-        ~Bureaucrat();
-        Bureaucrat(const Bureaucrat &c);
-        Bureaucrat operator=(const Bureaucrat &c);
+        Form();
+        Form(string name, int signgrade, int execgrade);
+        Form(const Form& other);
+        bool getsign() const;
         string getName() const;
-        int getGrade() const;
-        void IncrementGrade();
-        void DecrementGrade();
-
+        int getSigngrade() const;
+        int getExecgrade() const;
+        Form& operator=(const Form& other);
+        ~Form();
+        bool BeSigned(const Bureaucrat &c);
 };
-std::ostream &operator<<(std::ostream &os, const Bureaucrat &c);
+
+std::ostream& operator<<(std::ostream& os, const Form& a);
 #endif

@@ -1,8 +1,8 @@
-NAME = Bureaucrat
+NAME = Forms
 
-Headers = Bureaucrat.hpp
+Headers = Bureaucrat.hpp Form.hpp
 
-SRC = Bureaucrat.cpp main.cpp
+SRC = Bureaucrat.cpp main.cpp Form.cpp
 
 Flags = -Wall -Wextra -Werror 
 
