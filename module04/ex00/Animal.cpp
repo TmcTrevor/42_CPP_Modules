@@ -3,12 +3,12 @@
 Animal::Animal()
 {
     type = "Random ANIMAL";
-    Cout << GREEN << "Call to default constructor" << DEFAULT << Endl;
+    Cout << PURPLE << "Call to default constructor" << DEFAULT << Endl;
 }
 
 Animal::~Animal()
 {
-     Cout << GREEN << "Call to the destructor" << DEFAULT << Endl;
+     Cout << RED << "Call to the destructor" << DEFAULT << Endl;
 }
 
 Animal::Animal(const Animal &a)

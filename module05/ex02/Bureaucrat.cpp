@@ -36,7 +36,6 @@ Bureaucrat Bureaucrat::operator=(const Bureaucrat &c)
     Cout << PURPLE << "assignment operator called " << DEFAULT << Endl;
     return (*this);
 }
-
 string Bureaucrat::getName() const
 {
     return (this->Name);
@@ -59,7 +58,7 @@ void Bureaucrat::DecrementGrade()
 
 const char* Bureaucrat::GradeTooHighException::what() const throw()
 {
-    return "Grade is too high";
+    return "Grade is too hight";
 }
 
 const char* Bureaucrat::GradeTooLowException::what() const throw()

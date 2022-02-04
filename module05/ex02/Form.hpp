@@ -31,6 +31,7 @@ class Form
         bool signd;
         const int signgrade;
         const int execgrade;
+        string Target;
     public :
         class GradeTooLowException: public std::exception
         {
@@ -41,15 +42,20 @@ class Form
             const char* what() const throw();
         };
         Form();
-        Form(string name, int signgrade, int execgrade);
+        Form(string name, int signgrade, int execgrade, string target);
         Form(const Form& other);
+
+        /* Getters */
         bool getsign() const;
         string getName() const;
         int getSigngrade() const;
         int getExecgrade() const;
+        string getTarget() const;
+        /*******************************/
         Form& operator=(const Form& other);
         ~Form();
-        virtual bool BeSigned(const Bureaucrat &c);
+        virtual bool BeSigned(const Bureaucrat &c) = 0;
+        virtual  void execute(Bureaucrat const & executer) const = 0;
 };
 
 std::ostream& operator<<(std::ostream& os, const Form& a);
