@@ -9,17 +9,6 @@
 
 int main()
 {
-    // int a = 1000;
-    // try {
-    //     if (a == 100)
-    //         throw "fuck";
-    //     else
-    //         std::cout << "nop" << std::endl;
-    // }
-    // catch (const char *s)
-    // {
-    //     std::cout << "asdasd " << s << std::endl;
-    // }
     string h = "General";
     try 
     {
