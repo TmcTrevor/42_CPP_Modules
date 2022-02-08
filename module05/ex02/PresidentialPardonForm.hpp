@@ -8,7 +8,7 @@
 #include <cmath>
 #include <fstream>
 #include "Form.hpp"
-#include "Bureaucrat.hpp"
+
 
 # define	string std::string
 # define	Cout std::cout

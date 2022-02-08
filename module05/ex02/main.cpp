@@ -30,7 +30,7 @@ int main()
         // Cout << b;
         // Cout << d;
         // a.execute(c);
-        c.executeForm(a);
+        c.executeForm(d);
         // d.execute(c);
     }
     catch (std::exception &e)

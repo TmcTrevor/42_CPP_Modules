@@ -8,7 +8,7 @@
 #include <cmath>
 
 
-//#include "Bureaucrat.hpp"
+#include "Bureaucrat.hpp"
 
 # define	string std::string
 # define	Cout std::cout
@@ -61,8 +61,8 @@ class Form
         /*****************************/
         Form& operator=(const Form& other);
         ~Form();
-        virtual bool BeSigned(qBureaucrat const  &c);
-        virtual  void execute(Bureaucrat const  &executer)  = 0;
+        virtual bool BeSigned(Bureaucrat const  &c);
+        virtual  void execute(Bureaucrat const  &executer) const = 0;
 };
 
 std::ostream& operator<<(std::ostream& os, const Form& a);

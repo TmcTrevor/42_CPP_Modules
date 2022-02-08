@@ -7,8 +7,6 @@
 #include <exception>
 #include <cmath>
 
-class Form;
-
 # define	string std::string
 # define	Cout std::cout
 # define	Cin std::cin
@@ -22,6 +20,8 @@ class Form;
 # define 	BLUE 		"\e[1;34m"
 # define 	PURPLE 	"\033[1;35m"
 # define 	DEFAULT	"\e[0;37m"
+
+class Form;
 
 class Bureaucrat
 {
@@ -46,7 +46,7 @@ class Bureaucrat
         int getGrade() const;
         void IncrementGrade();
         void DecrementGrade();
-       // void executeForm(Form const &form) const;
+        void executeForm(Form const &form) const;
 };
 
 std::ostream &operator<<(std::ostream &os, const Bureaucrat &c);

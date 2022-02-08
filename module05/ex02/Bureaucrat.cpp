@@ -1,4 +1,5 @@
 #include "Bureaucrat.hpp"
+#include "Form.hpp"
 
 Bureaucrat::Bureaucrat()
 {
@@ -66,17 +67,17 @@ const char* Bureaucrat::GradeTooLowException::what() const throw()
     return "Grade is too LOW";
 }
 
-// void    Bureaucrat::executeForm(Form const &form) const
-// {
-//     try {
-//         form.execute();
-//         Cout << WHITE << "< " << getName() << " > executed < " << form.getName() << " >"<< DEFAULT << Endl;
-//     }
-//     catch (std::exception &e)
-//     {
-//         Cout << RED << e.what() << DEFAULT << Endl;
-//     }
-// }
+void    Bureaucrat::executeForm(Form const &form) const
+{
+    try {
+        form.execute(*this);
+        Cout << WHITE << "< " << getName() << " > executed < " << form.getName() << " >"<< DEFAULT << Endl;
+    }
+    catch (std::exception &e)
+    {
+        Cout << RED << e.what() << DEFAULT << Endl;
+    }
+}
 
 std::ostream &operator<<(std::ostream &os, const Bureaucrat &c)
 {
