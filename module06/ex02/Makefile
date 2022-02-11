@@ -1,6 +1,6 @@
 NAME = Serialization
 
-SRC = main.cpp
+SRC = main.cpp Base.cpp
 
 Flags = -Wall -Wextra -Werror 
 

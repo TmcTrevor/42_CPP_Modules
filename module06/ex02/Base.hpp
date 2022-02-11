@@ -9,6 +9,8 @@
 #define WHITE   	"\033[37m"
 #define RED     	"\033[31m"
 #define MAGENTA 	"\033[35m"
+#define 	GREEN 		"\e[1;32m"
+# define 	YELLOW 	"\e[1;33m"
 #define cout		std::cout
 #define cerr		std::cerr
 #define endl		std::endl

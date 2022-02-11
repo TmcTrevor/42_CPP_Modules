@@ -2,5 +2,5 @@
 
 Base::~Base(void)
 {
-	cout << "Base::Virtual distructor called." << endl;
+	cout << RED << "Base::Virtual distructor called." << RESET <<endl;
 }
