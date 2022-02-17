@@ -1,18 +1,29 @@
 #ifndef ARRAY_HPP_
 #define ARRAY_HPP_
+#include <iostream>
+#include <exception>
+#include <string>
 
 template<typename T>
 class Array
 {
     private:
         T *array;
-        int n;
+        unsigned int n;
     public:
+    class Outofrange : public std::exception
+		{
+			public:
+				const char *what() const throw();
+		};
         Array();
+        ~Array();
         Array(unsigned int n);
         Array(Array &other);
         Array &operator=(const Array &c);
-        T
+        T &operator[](unsigned int a);
+        unsigned int size() const;
+        
 };
 
 template<typename T>
@@ -38,14 +49,39 @@ Array<T>::Array(Array &other)
         array[i] = other.array[i];
 }
 
-template<typename T>
-Array<T>::Array(Array &other)
+template <typename T>
+Array<T> &Array<T>::operator=(const Array<T> &c)
 {
-    array = new T[other.n];
-    n = other.n;
-    for (size_t i = 0; i < other.n; i++)
-        array[i] = other.array[i];
-    return *this;
+    if(array)
+        delete[] array;
+     array = new T[c.n];
+    n = c.n;
+   for (unsigned int i = 0; i < c.n; i++)
+        array[i] = c.array[i];
+    return (*this);
 }
 
+template <typename T>
+T &Array<T>::operator[](unsigned int a)
+{
+    if (a > n)
+        throw Outofrange();
+    return (array[a]);
+}
+
+template <typename T>
+unsigned int Array<T>::size() const
+{
+    return (n);
+}
+template <typename T>
+const char * Array<T>::Outofrange::what() const throw()
+{
+    return "out of range <abort>";
+}
+template <typename T>
+Array<T>::~Array()
+{
+    delete [] array;
+}
 #endif

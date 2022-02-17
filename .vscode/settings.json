@@ -2,6 +2,16 @@
     "files.associations": {
         "iostream": "cpp",
         "ostream": "cpp",
-        "new": "cpp"
+        "new": "cpp",
+        "deque": "cpp",
+        "functional": "cpp",
+        "map": "cpp",
+        "string": "cpp",
+        "unordered_map": "cpp",
+        "vector": "cpp",
+        "__bit_reference": "cpp",
+        "algorithm": "cpp",
+        "iterator": "cpp",
+        "stack": "cpp"
     }
 }
